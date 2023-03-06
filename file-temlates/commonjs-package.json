@@ -1,4 +1,5 @@
 {
     "sideEffects": false,
-    "module":  "{path}"
+    "module":  "{path}",
+    "main": "./index.js"
 }
