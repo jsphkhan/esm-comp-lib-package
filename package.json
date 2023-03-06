@@ -11,9 +11,11 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
+    "copy:packagejson:esm": "node ./scripts/build.esm.js",
+    "copy:packagejson:commonjs": "node ./scripts/build.commonjs.js",
     "build:babel:commonjs": "BABEL_ENV=commonjs babel src --out-dir dist --extensions .ts,.js,.tsx --copy-files",
     "build:babel:esm": "BABEL_ENV=esm babel src --out-dir dist/esm --extensions .ts,.js,.tsx --copy-files",
-    "build:babel": "npm run prebuild && npm run build:babel:commonjs && npm run build:babel:esm"
+    "build:babel": "npm run prebuild && npm run build:babel:commonjs && npm run build:babel:esm && npm run copy:packagejson:esm && npm run copy:packagejson:commonjs"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,8 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
     "babel-plugin-add-import-extension": "^1.6.0",
+    "fs-extra": "^11.1.0",
+    "klaw": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.3.0"
