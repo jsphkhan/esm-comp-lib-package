@@ -1,6 +1,6 @@
 {
   "name": "@jsphkhan/esm-comp-lib-package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component lib that produces ESM modules",
   "sideEffects": false,
   "main": "dist/index.js",
