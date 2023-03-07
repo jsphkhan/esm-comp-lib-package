@@ -1,0 +1,19 @@
+Overview:
+----------
+This is a React component library package that supports both CommonJS and ECMAScript modules
+Package is published to NPM Package registry
+Package name: @jsphkhan/esm-comp-lib-package
+This is a scoped public package
+
+I am using Babel to compile Typescript TSX files to JS
+It follows the date-fns style of creating commonJS and ESM version of the modules
+
+Build and Publish package:
+--------------------------
+npm run build:babel <- this will create the dist folder
+npm version <major/minor/patch>
+npm publish
+
+References:
+------------
+https://data4altayyargroup.atlassian.net/wiki/spaces/FRON/pages/3607199760/Custom+React+Component+Library+Package+Tree+Shake
