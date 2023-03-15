@@ -15,6 +15,6 @@ const presets = [
  * eg. import isClient from "./utils/ssr/isClient"; // will not work and throw error
  *     import isClient from "./utils/ssr/isClient/index.js"; // this works
  */
-const plugins = [['babel-plugin-add-import-extension', { extension: 'js' }]];
+const plugins = [['babel-plugin-add-import-extension', { extension: 'js' }], "transform-remove-console"];
 
 module.exports = { presets, plugins };
